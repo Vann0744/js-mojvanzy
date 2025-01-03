@@ -1,0 +1,15 @@
+{
+  "name": "js-vannzy-obfuscator",
+  "version": "1.0.0",
+  "description": "JavaScript obfuscator for code obfuscation and security.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "acorn": "^8.7.1",
+    "escodegen": "^2.0.0"
+  }
+}
