@@ -1,0 +1,181 @@
+/* ================= SIDEBAR ================= */
+#sidebar {
+    width: 280px;
+    background: #fff;
+    position: fixed;
+    left: -280px;
+    top: 0;
+    height: 100%;
+    z-index: 2000;
+    transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 10px 0 30px rgba(0,0,0,0.05);
+    border-right: 1px solid #f3f4f6;
+    display: flex;
+    flex-direction: column;
+}
+
+#sidebar.active {
+    left: 0;
+}
+
+#overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.3);
+    z-index: 1500;
+    backdrop-filter: blur(2px);
+}
+
+#overlay.active {
+    display: block;
+}
+
+/* ================= HEADER ================= */
+header {
+    padding: 15px 20px;
+    background: #fff;
+    border-bottom: 1px solid #f3f4f6;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.menu-btn {
+    background: #fff1f2;
+    border: 1px solid #fbcfe8;
+    padding: 8px 12px;
+    border-radius: 999px;
+    color: #db2777;
+    cursor: pointer;
+}
+
+.header-title {
+    font-weight: 800;
+    font-size: 18px;
+    color: #1f2937;
+}
+
+/* ================= CHAT ================= */
+#chat-feed {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.chat-row {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    animation: fadeIn 0.25s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.bubble {
+    max-width: 85%;
+    padding: 14px 18px;
+    border-radius: 22px;
+    font-size: 15px;
+    line-height: 1.6;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+.user-bubble {
+    align-self: flex-end;
+    background: #db2777;
+    color: #fff;
+    border-bottom-right-radius: 6px;
+    box-shadow: 0 4px 15px rgba(219,39,119,.25);
+}
+
+.ai-bubble {
+    align-self: flex-start;
+    background: #f3f4f6;
+    color: #1f2937;
+    border-bottom-left-radius: 6px;
+}
+
+/* ================= INPUT ================= */
+.bottom {
+    padding: 15px 5%;
+    border-top: 1px solid #f3f4f6;
+}
+
+.in-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1.5px solid #e5e7eb;
+    border-radius: 25px;
+    padding: 6px 15px;
+    max-width: 768px;
+    margin: 0 auto;
+    background: #f9fafb;
+}
+
+textarea {
+    flex: 1;
+    border: none;
+    outline: none;
+    resize: none;
+    padding: 10px;
+    background: transparent;
+}
+
+#send {
+    background: #db2777;
+    color: #fff;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* ================= HISTORY ================= */
+.history-item {
+    padding: 14px 18px;
+    background: #f9fafb;
+    border: 1px solid #f3f4f6;
+    border-radius: 15px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #4b5563;
+    margin: 0 20px 12px;
+    cursor: pointer;
+    transition: 0.25s;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.history-item:hover {
+    background: #fff1f2;
+    border-color: #db2777;
+    color: #db2777;
+    transform: translateX(5px);
+}
+
+/* ================= BUTTON ================= */
+.new-btn {
+    margin: 15px 20px;
+    padding: 12px;
+    background: #db2777;
+    border: none;
+    border-radius: 12px;
+    color: #fff;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.new-btn:hover {
+    opacity: .9;
+}
